@@ -1,7 +1,3 @@
-/* ============================================================
-   style.css — 肖子言个人简历网站
-   风格: 现代简约 · 科技感 · 深蓝主色调 · 专业求职风
-   ============================================================ */
 
 /* ---------- CSS 变量 ---------- */
 :root {
@@ -219,6 +215,37 @@ img {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+/* 首页双栏布局：文字 + 证件照 */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+}
+
+.hero-photo img {
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  border: 2px solid var(--cyan-border);
+  object-fit: cover;
+  filter: brightness(0.95);
+  transition: border-color var(--ease), box-shadow var(--ease);
+}
+
+.hero-photo img:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 24px rgba(100, 255, 218, 0.15);
 }
 
 /* ---------- 按钮 ---------- */
@@ -666,6 +693,18 @@ img {
   /* 首页按钮竖排 */
   .hero-actions {
     flex-direction: column;
+  }
+
+  /* 首页双栏改为垂直堆叠 */
+  .hero-inner {
+    flex-direction: column-reverse;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  .hero-photo img {
+    width: 150px;
+    height: 188px;
   }
 }
 
