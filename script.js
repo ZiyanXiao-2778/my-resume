@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.removeChild(textarea);
   }
 
-  /** 显示"已复制"提示并在 1.8 秒后隐藏 */
+
   function showCopied(el) {
     el.classList.add("copied");
     setTimeout(function () {
